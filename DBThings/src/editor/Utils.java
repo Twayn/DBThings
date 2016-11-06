@@ -136,9 +136,9 @@ public class Utils {
 	public static void generateImages (int count) {
       for (int k = 0; k < count; k++) {
 			try {
-	            BufferedImage bi = new BufferedImage(64, 64, BufferedImage.TYPE_INT_RGB);
-	            for (int i = 0; i < 64; i++) {
-	            	for (int j = 0; j < 64; j++) {
+	            BufferedImage bi = new BufferedImage(128, 128, BufferedImage.TYPE_INT_RGB);
+	            for (int i = 0; i < 128; i++) {
+	            	for (int j = 0; j < 128; j++) {
 						bi.setRGB(i, j, ThreadLocalRandom.current().nextInt(0, 16777216 + 1));
 					}	
 				}
