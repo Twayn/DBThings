@@ -42,7 +42,7 @@ class RequestThread implements Runnable
   public void run()
   {
 	  int step = 0;
-	  while (step < 20){
+	  while (step < 20){ //use while (true) //for doing continuous requests
 		   currentId = ThreadLocalRandom.current().nextInt(1, dbCount);
 		   long start = System.currentTimeMillis();
 		   step++;
@@ -63,7 +63,7 @@ class RequestThread implements Runnable
 		         
 		         sum.getAndAdd(end - start);
 		         result = "";
-		         Thread.sleep(1);
+		         //Thread.sleep(1);
 		         delimeter.incrementAndGet();
 		      } catch (java.net.SocketTimeoutException e) { 
 				System.out.println("Timeout Exception");

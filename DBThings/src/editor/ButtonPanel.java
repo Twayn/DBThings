@@ -87,6 +87,7 @@ public class ButtonPanel extends JPanel {
         @Override
         public void run() {
 	        try {
+	        	long start = System.currentTimeMillis();
 	        	preparedStatement = connection.prepareStatement(
 		                "SELECT COUNT(*) FROM goods ");
 	        	counts = preparedStatement.executeQuery();
@@ -124,6 +125,8 @@ public class ButtonPanel extends JPanel {
 	                });
 	        		
 	        	}
+	        	long end = System.currentTimeMillis();
+	        	System.out.println(end-start);
 	   
 	        } catch (Exception exception){
 	        	exception.printStackTrace();
